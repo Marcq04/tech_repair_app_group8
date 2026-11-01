@@ -135,3 +135,15 @@ export const toggleBookmark = async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 };
+
+export const logoutUser = async (req, res) => {
+    try {
+        // Since JWTs are stateless, the primary action happens on the client side 
+        // by deleting the stored token. 
+        res.status(200).json({
+            message: "Logged out successfully"
+        });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+};
