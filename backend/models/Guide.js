@@ -33,10 +33,14 @@ const guideSchema = new mongoose.Schema(
             required: true,
             enum: ['Laptop', 'Desktop', 'OS', 'Peripheral', 'Windows', 'macOS', 'Linux', 'Hardware', 'Network', 'Performance']
         },
-        deviceModelYear: {
+        repairType: {
+            type: String,
+            trim: true
+        },
+        modelYear: {
             type: Number
         },
-        difficultyLevel: {
+        difficulty: {
             type: String,
             required: true,
             enum: ['Beginner', 'Intermediate', 'Advanced'],
@@ -46,17 +50,21 @@ const guideSchema = new mongoose.Schema(
             type: Number,
             required: true
         },
-        toolsRequired: {
+        toolsNeeded: {
             type: [String],
             default: []
         },
-        partsRequired: {
+        partsNeeded: {
             type: [String],
             default: []
         },
-        safetyNotes: {
+        safetyWarnings: {
             type: String,
             trim: true
+        },
+        tags: {
+            type: [String],
+            default: []
         },
         steps: [stepSchema], // Embeds the step sub-documents array
         author: {
@@ -67,7 +75,11 @@ const guideSchema = new mongoose.Schema(
         upvotes: {
             type: Number,
             default: 0
-        }
+        },
+        upvotedBy: [{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'User'
+        }]
     },
     {
         timestamps: true // Automatically manages createdAt and updatedAt

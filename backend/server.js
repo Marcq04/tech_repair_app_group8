@@ -11,6 +11,7 @@ import "./models/Review.js";
 
 // Routes
 import userRoutes from "./routes/userRoutes.js";
+import guideRoutes from "./routes/guideRoutes.js";
 
 // Load environment variables from your custom path
 dotenv.config({ path: './env/atlas-credentials.env' });
@@ -38,6 +39,7 @@ connectDB();
 
 // --- MOUNT ROUTES ---
 app.use("/api/users", userRoutes);
+app.use("/api/guides", guideRoutes);
 
 // Basic root test route
 app.get("/", (req, res) => {
