@@ -14,6 +14,7 @@ import userRoutes from "./routes/userRoutes.js";
 import guideRoutes from "./routes/guideRoutes.js";
 import communityRequestRoutes from "./routes/communityRequestRoutes.js";
 import notificationRoutes from "./routes/notificationRoutes.js";
+import reviewRoutes from "./routes/reviewRoutes.js";
 
 // Load environment variables from your custom path
 dotenv.config({ path: './env/atlas-credentials.env' });
@@ -44,6 +45,7 @@ app.use("/api/users", userRoutes);
 app.use("/api/guides", guideRoutes);
 app.use("/api/requests", communityRequestRoutes);
 app.use("/api/notifications", notificationRoutes);
+app.use("/api/reviews", reviewRoutes);
 
 // Basic root test route
 app.get("/", (req, res) => {
