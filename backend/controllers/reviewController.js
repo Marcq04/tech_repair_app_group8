@@ -2,7 +2,7 @@ import Review from "../models/Review.js";
 import Guide from "../models/Guide.js";
 import mongoose from "mongoose";
 
-// 1. Submit a 1-5 star rating, review commentary, and fix success status for a specific repair guide
+// Submit a 1-5 star rating, review commentary, and fix success status for a specific repair guide
 export const createReview = async (req, res) => {
     try {
         const { guideId } = req.params;
@@ -39,7 +39,7 @@ export const createReview = async (req, res) => {
     }
 };
 
-// 2. Fetches community reviews for a specific guide
+// Fetches community reviews for a specific guide
 export const getGuideReviews = async (req, res) => {
     try {
         const { guideId } = req.params;

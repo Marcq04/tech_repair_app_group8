@@ -23,7 +23,7 @@ const replySchema = new mongoose.Schema(
         }
     },
     {
-        timestamps: true // Automatically generates createdAt and updatedAt for each reply
+        timestamps: true 
     }
 );
 
@@ -60,7 +60,7 @@ const communityRequestSchema = new mongoose.Schema(
         }
     },
     {
-        timestamps: true // Automatically manages thread creation and modification timestamps
+        timestamps: true 
     }
 );
 

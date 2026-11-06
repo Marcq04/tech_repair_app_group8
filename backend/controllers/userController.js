@@ -115,7 +115,7 @@ export const toggleBookmark = async (req, res) => {
         const index = user.bookmarkedGuides.indexOf(guideId);
 
         if (index > -1) {
-            // Already bookmarked -> Remove it (unbookmark)
+            // Already bookmarked ==> Remove it (unbookmark)
             user.bookmarkedGuides.splice(index, 1);
             await user.save();
             return res.status(200).json({

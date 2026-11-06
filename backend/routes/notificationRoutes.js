@@ -6,7 +6,7 @@ import {
 
 const router = express.Router();
 
-router.get("/user/:userId", getUserNotifications);     // GET /api/notifications/user/:userId
-router.patch("/:notificationId/read", markAsRead);     // PATCH /api/notifications/:notificationId/read
+router.get("/user/:userId", getUserNotifications);     
+router.patch("/:notificationId/read", markAsRead);     
 
 export default router;

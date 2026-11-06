@@ -1,7 +1,7 @@
 import Notification from "../models/Notification.js";
 import mongoose from "mongoose";
 
-// 1. Retrieves alerts/notifications for a specific user (with option to filter unread only)
+// Retrieves alerts/notifications for a specific user (with option to filter unread only)
 export const getUserNotifications = async (req, res) => {
     try {
         const { userId } = req.params;
@@ -29,7 +29,7 @@ export const getUserNotifications = async (req, res) => {
     }
 };
 
-// 2. Updates notification status (isRead: true) when viewed
+// Updates notification status (isRead: true) when viewed
 export const markAsRead = async (req, res) => {
     try {
         const { notificationId } = req.params;

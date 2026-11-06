@@ -6,7 +6,7 @@ import {
 
 const router = express.Router();
 
-router.post("/guide/:guideId", createReview);      // POST /api/reviews/guide/:guideId
-router.get("/guide/:guideId", getGuideReviews);    // GET /api/reviews/guide/:guideId
+router.post("/guide/:guideId", createReview);      
+router.get("/guide/:guideId", getGuideReviews);    
 
 export default router;

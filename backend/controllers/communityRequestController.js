@@ -1,7 +1,7 @@
 import CommunityRequest from "../models/CommunityRequest.js";
 import mongoose from "mongoose";
 
-// 1. Submit a troubleshooting request
+// Submit a troubleshooting request
 export const createRequest = async (req, res) => {
     try {
         const { title, description, deviceCategory, imageUrl, authorId } = req.body;
@@ -28,7 +28,7 @@ export const createRequest = async (req, res) => {
     }
 };
 
-// 2. Get all active community help threads
+// Get all active community help threads
 export const getAllRequests = async (req, res) => {
     try {
         const { category, isResolved } = req.query;
@@ -50,7 +50,7 @@ export const getAllRequests = async (req, res) => {
     }
 };
 
-// 3. Get single community request thread by ID with replies populated
+// Get single community request thread by ID with replies populated
 export const getRequestById = async (req, res) => {
     try {
         const { requestId } = req.params;
@@ -73,7 +73,7 @@ export const getRequestById = async (req, res) => {
     }
 };
 
-// 4. Add a reply or video solution to an open request thread
+// Add a reply or video solution to an open request thread
 export const addReply = async (req, res) => {
     try {
         const { requestId } = req.params;
@@ -109,7 +109,7 @@ export const addReply = async (req, res) => {
     }
 };
 
-// 5. Toggle the thread resolution status (isResolved)
+// Toggle the thread resolution status (isResolved)
 export const markResolved = async (req, res) => {
     try {
         const { requestId } = req.params;

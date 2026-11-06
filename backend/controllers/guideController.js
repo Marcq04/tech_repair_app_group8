@@ -2,7 +2,7 @@ import Guide from "../models/Guide.js";
 import User from "../models/User.js";
 import mongoose from "mongoose";
 
-// 1. Get all guides with optional query filtering (device category, type, model year, keyword search)
+// Get all guides with optional query filtering (device category, type, model year, keyword search)
 export const getAllGuides = async (req, res) => {
     try {
         const { category, type, modelYear, search } = req.query;
@@ -45,7 +45,7 @@ export const getAllGuides = async (req, res) => {
     }
 };
 
-// 2. Get single guide by ID with full details, step-by-step instructions, and author data
+// Get single guide by ID with full details, step-by-step instructions, and author data
 export const getGuideById = async (req, res) => {
     try {
         const { guideId } = req.params;
@@ -67,7 +67,7 @@ export const getGuideById = async (req, res) => {
     }
 };
 
-// 3. Create a new repair guide (for authorized users/technicians)
+// Create a new repair guide (for authorized users/technicians)
 export const createGuide = async (req, res) => {
     try {
         const { 
@@ -115,7 +115,7 @@ export const createGuide = async (req, res) => {
     }
 };
 
-// 4. Upvote a guide and record the voter's user ID
+// Upvote a guide and record the voter's user ID
 export const upvoteGuide = async (req, res) => {
     try {
         const { guideId } = req.params;

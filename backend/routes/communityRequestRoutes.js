@@ -9,10 +9,10 @@ import {
 
 const router = express.Router();
 
-router.get("/", getAllRequests);                      // GET /api/requests
-router.get("/:requestId", getRequestById);              // GET /api/requests/:requestId
-router.post("/", createRequest);                      // POST /api/requests
-router.post("/:requestId/replies", addReply);           // POST /api/requests/:requestId/replies
-router.patch("/:requestId/resolve", markResolved);      // PATCH /api/requests/:requestId/resolve
+router.get("/", getAllRequests);                      
+router.get("/:requestId", getRequestById);              
+router.post("/", createRequest);                      
+router.post("/:requestId/replies", addReply);           
+router.patch("/:requestId/resolve", markResolved);      
 
 export default router;

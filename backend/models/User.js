@@ -28,7 +28,7 @@ const userSchema = new mongoose.Schema(
         },
         role: {
             type: String,
-            enum: ['device_owner', 'small_business', 'technician'],
+            enum: ['device_owner', 'small_business', 'technician'], // Only allow these roles
             default: 'device_owner'
         },
         isVerifiedTechnician: {
@@ -49,7 +49,7 @@ const userSchema = new mongoose.Schema(
         ]
     },
     {
-        timestamps: true // Automatically creates and manages createdAt and updatedAt fields
+        timestamps: true 
     }
 );
 
